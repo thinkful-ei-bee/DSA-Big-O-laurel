@@ -1,4 +1,4 @@
-// Counting Sheep
+// ======================= Counting Sheep
 
 function SheepJumpOutOfFence(n) {
     if (n === 0) {
@@ -16,7 +16,7 @@ SheepJumpOutOfFence(10)
 
 
 
-// Power Calculator
+// ====================== Power Calculator
 
 function powerCalculator(b, expo) {
     if (expo < 0) {
@@ -35,7 +35,7 @@ console.log(powerCalculator(10, -2));
 
 
 
-// Reverse String
+// ===================== Reverse String
 function stringReverse(string) {
 
     if (string.length === 0) {
@@ -71,7 +71,7 @@ console.log(reverseString('laurel'));
 
 
 
-// nth Triangular Number
+// ======================== nth Triangular Number
 
 function triangle(num) {
     if (num === 0) {
@@ -84,7 +84,7 @@ console.log(triangle(5));
 // iterative version
 
 
-// String Splitter
+// ========================= String Splitter
 
 function stringSeparator(string) {
     if (string.length === 0) {
@@ -111,7 +111,7 @@ console.log(stringSplitter('02/20/2020'));
 
 
 
-// Fibonacci
+// ====================== Fibonacci
 
 function fb(n) {
     if (n < 2 && n >= 0) {
@@ -135,9 +135,7 @@ function fib(num) {
 
 
 
-
-
-// Factorial
+// ====================== Factorial
 
 function fac(num) {
     if (num === 1) {
