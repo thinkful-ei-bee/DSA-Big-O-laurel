@@ -36,7 +36,6 @@ console.log(powerCalculator(10, -2));
 
 
 // Reverse String
-
 function stringReverse(string) {
 
     if (string.length === 0) {
@@ -48,7 +47,6 @@ function stringReverse(string) {
 
 console.log(stringReverse('abcde'))
 
-
 // iterative version
 function reverseString(str) {
     let splitString = str.split("")
@@ -56,7 +54,6 @@ function reverseString(str) {
     let joinStr = reverseStr.join();
     return joinStr;
 }
-
 console.log(reverseString('laurel'));
 
 // ================ OR ================
@@ -74,7 +71,6 @@ console.log(reverseString('laurel'));
 
 
 
-
 // nth Triangular Number
 
 function triangle(num) {
@@ -84,6 +80,9 @@ function triangle(num) {
     return num + triangle(num - 1);
 }
 console.log(triangle(5));
+
+// iterative version
+
 
 // String Splitter
 
@@ -99,9 +98,18 @@ function stringSeparator(string) {
     return string[0] + stringSeparator(string.substr(1))
 
 }
-
-
 console.log(stringSeparator('02/20/2020'))
+
+// iterative version
+function stringSplitter(str) {
+    let splitStr = str.split('/');
+    let joinString = splitStr.join()
+    return joinString;
+}
+console.log(stringSplitter('02/20/2020'));
+
+
+
 
 // Fibonacci
 
@@ -114,9 +122,20 @@ function fb(n) {
 
 console.log(fb(7))
 
-// for(let i=0;i<20;i++){
-//   console.log(fb(i))
-// }
+// iterative version
+function fib(num) {
+    let a = 2;
+    let b = 0;
+
+    for (let i = 0; i < 20; i++) {
+
+    }
+}
+
+
+
+
+
 
 // Factorial
 
@@ -127,3 +146,14 @@ function fac(num) {
     return num * (fac(num - 1))
 }
 console.log(fac(4));
+
+// iterative version
+function factorial(num) {
+    if (num === 1)
+        return 1;
+    for (var i = num - 1; i >= 1; i--) {
+        num = num * i;
+    }
+    return num;
+}
+console.log(factorial(4));
