@@ -27,16 +27,15 @@ console.log(powerCalculator(10, -2));
 
 // // the big o for String Reverse is: 
 
-// function stringReverse(string) {
+function reverseString(str) {
+    if (str.length < 2) {
+        return str;
+    }
+    return reverseString(str.slice(1)) + str[0];
+}
 
-//     if (string.length === 0) {
-//         return ''
-//     }
-//     return stringReverse(string.substr(1)) + string[0]
-// }
 
-
-// console.log(stringReverse('abcde'))
+ console.log(stringReverse('abcde'))
 
 // // the big o for nth Triangle Number is: 
 
@@ -46,6 +45,12 @@ console.log(powerCalculator(10, -2));
 //     }
 //     return num + triangle(num - 1);
 // }
+
+function triangle(n) {
+    if (n < 2)
+        return n;
+    return n + triangle(n - 1);
+}
 // console.log(triangle(5));
 
 // // the big o for String Splitter is: 
@@ -81,4 +86,34 @@ console.log(fb(7))
 //     }
 //     return num * (fac(num - 1))
 // }
+function factorial(n) {
+    // Base Case - when n is equal to 0, we stop the recursion
+    if (n === 0) {
+        return 1;
+    }
+    // This is our Recursive Case
+    // It will run for all other conditions except when n is equal to 0
+    return n * factorial(n - 1);
+}
 // console.log(fac(4));
+
+function fibonacci(n) {
+    // Base case
+    if (n <= 0) {
+        return 0;
+    }
+    // Base case
+    if (n <= 2) {
+        return 1;
+    }
+    // Recursive case
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+function binaryRep(input) {
+    if (input <= 0) {
+        return '';
+    }
+    let binary = Math.floor(input % 2);
+    return binaryRep(Math.floor(input / 2)) + binary
+}
